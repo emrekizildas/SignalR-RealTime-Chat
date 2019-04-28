@@ -1,0 +1,79 @@
+﻿@page
+@model IndexModel
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sohbet - SignalRExample</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="row" style="margin-top:40px;">
+        <div class="container">
+            <div class="card bg-light" style="height:521px;">
+                <div class="card-header">
+                    Sohbet Uygulaması
+                </div>
+                <div class="card-body" style="max-height: 80%;overflow-y: auto;">
+                    <!-- Giriş ekranı tasarımı başlangıcı -->
+                    <div id="girisEkrani">
+                        <div class="row">
+                            <div class="col-md-4 offset-md-4">
+                                <div class="input-group mb-3">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text" id="kullanici_adi">@@</span>
+                                    </div>
+                                    <input type="text" class="form-control" placeholder="Kullanıcı adı giriniz"
+                                           aria-label="Kullanıcı adı giriniz" aria-describedby="kullanici_adi" id="userInput">
+                                </div>
+                                <button type="button" class="form-control btn btn-success" id="loginButton">Giriş Yap</button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Giriş ekranı tasarımı bitiş -->
+
+                    <div id="chatEkrani" style="display:none;height:100%">
+                        <div class="row">
+                            <div id="messageList" class="col-md-12">
+                                @{
+                                        foreach (var message in Model.Messages)
+                                        {
+                                <div class="d-flex">
+                                    <div class="alert alert-dark" role="alert">
+                                        <b>@@@message.Username</b> @message.MessageText
+                                    </div>
+                                </div>
+                                    }
+                                    }
+
+                                <div class="d-flex justify-content-end">
+                                    @**<div class="alert alert-info" role="alert">
+                                            Bu mesaj sizin tarafınızdan gönderildi! <b>@@emrkzl</b>
+                                        </div>*@
+                                </div>
+                            </div>
+                            <div id="yeniMesajAlani" class="col-md-12" style="position: absolute;bottom: 10px;">
+                                <div class="row">
+                                    <div class="col-md-9">
+                                        <input type="text" class="form-control" id="messageInput"
+                                               placeholder="Mesaj yazınız.." />
+                                    </div>
+                                    <div class="col-md-3">
+                                        <input type="button" id="sendButton" class="form-control btn btn-success" value="Gönder">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="~/lib/signalr/dist/browser/signalr.js"></script>
+    <script src="~/js/chat.js"></script>
+</body>
+</html>
