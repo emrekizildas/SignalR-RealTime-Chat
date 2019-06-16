@@ -1,0 +1,41 @@
+﻿<Properties StartupConfiguration="{C42535DB-C1FD-425B-85FE-FCEBCC4D67FF}|Default">
+  <MonoDevelop.Ide.Workbench ActiveDocument="SignalRExample/wwwroot/js/chat.js">
+    <Files>
+      <File FileName="SignalRExample/Models/ApplicationDbContext.cs" Line="15" Column="1" />
+      <File FileName="SignalRExample/Models/Message.cs" Line="17" Column="1" />
+      <File FileName="SignalRExample/Startup.cs" Line="16" Column="25" />
+      <File FileName="SignalRExample/Hubs/ChatHub.cs" Line="29" Column="2" />
+      <File FileName="SignalRExample/Pages/Index.cshtml" Line="79" Column="8" />
+      <File FileName="SignalRExample/wwwroot/js/chat.js" Line="54" Column="4" />
+      <File FileName="SignalRExample/Pages/Index.cshtml.cs" Line="26" Column="2" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="SignalRExample" expanded="True">
+            <Node name="SignalRExample" expanded="True">
+              <Node name="Hubs" expanded="True" />
+              <Node name="Models" expanded="True" />
+              <Node name="Pages" expanded="True" />
+              <Node name="wwwroot" expanded="True">
+                <Node name="js" expanded="True">
+                  <Node name="chat.js" selected="True" />
+                </Node>
+              </Node>
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+      <Pad Id="MonoDevelop.Debugger.WatchPad">
+        <State />
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.ItemProperties.SignalRExample PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>
